@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DEATHDROP - a Hangman Game With the Twist You Wanted</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- My CSS -->
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+	<div class="container">
+	<header class = "col-md-12">
+		<h1 class = "col-md-4">DEATHDROP</h1>
+		<h2 class = "col-md-8">The sickening drag queen hangman game!
+	</header>
+	<!-- instructions, etc go in here -->
+<div class="container">
+	<section class = "col-md-12 instructions">
+<p>
+	Welcome to DEATHDROP, gurl!  For (probably not) the first time in HERSTORY, it's the Hangman variant that has you guessing drag queens from RuPaul's Drag Race.  Guess the right letter or Laganja may hit the floor!  I know it sounds sickening but no one has swept for at least a week.  Help a sister out by completing the phrase.
+</p>
+<p>Click on either "Easy Mode" or "Hard Mode" to get started. You can guess the wrong letter 9 times before your girl's wig and costume get dirty. When you have finished the game, you'll get a new queen to guess!</p>
+<!-- Buttons that change the id for the game -->
+<div class="col-md-12 buttonWrap">
+<button id = "easyMode" class = "col-md-6">EASY MODE</button>
+
+<button id = "col-md-6 hardMode" class = "col-md-6">HARD MODE</button>
+</div>
+</div>
+</section>
+<!-- Area that shows the Hangman playspace for the word being guessed -->
+<section class ="col-md-12 activeWord ">
+	<h3 id = "guessMe" class = "col-md-4">Example</h3>
+</section>
+<!-- Area that counts successful/failed attempts to complete the word -->
+<section id = "scoreArea">
+		<p id="wins" class = "col-md-4"></p> <p id ="losses" class = "col-md-4"></p>
+</section>
+<!-- Shows the gameplay area -->
+<div class="container col-md-12">
+<!-- This area changes the image as needed for where we are in the game -->
+<div class="row">
+<div id = "col-md-5 gallows">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aperiam, officiis nobis quo numquam reiciendis in consequuntur rem molestiae, odit, atque dolore odio obcaecati cupiditate nulla possimus doloremque! Perspiciatis, quaerat.
+<img id = "laganjaScoreCard">
+
+</div>
+<!-- Area that shows how many guesses remain for this word and what letters have been used.  Separated for mobile responsive design -->
+<div class="col-md-12 graveyard">
+<div class="row">
+	<div class = "col-md-12 guessesRemaining">
+		<h4>Guesses Remaining!</h4>
+<p id = "chancesLeft"></p>
+</div>
+
+<div class="col-md-12 lettersUsed">
+<h4>Wrong Letters Guessed</h4>
+<p id = "wrongLetters">
+	</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+<footer class = "col-md-12 footer"> <p>FOOTER INFORMATION</p></footer>
+
+<!-- Link to JQuery -->
+<script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	crossorigin="anonymous"></script>
+	
+<!-- Link to my own javascript -->
+<script type ="text.javascript" src="assets/javascript/game.js">
+</script>
+</div>
+</body>
+</html>

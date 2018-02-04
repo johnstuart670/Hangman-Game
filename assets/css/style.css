@@ -1,0 +1,38 @@
+/* Container modification to make it feel fine and look GORGEOUS */
+
+.gameplayWrap,
+.gallows,
+.container
+.row,
+.button,
+.buttonWrap,
+#scoreArea,
+.activeWord {
+	display: flex;
+	float: none;
+	justify-content: space-around;
+
+}
+.row {
+	margin: 0px;
+}
+
+.graveyard,
+.guessesRemaining,
+.lettersUsed {
+	display: block;
+}
+
+.instructions:
+
+/* Font alterations */
+header {
+	align-items: baseline;
+}
+h1,h2 {
+	margin-top: 10px;
+}
+h3,
+footer {
+	text-align: center;
+}
