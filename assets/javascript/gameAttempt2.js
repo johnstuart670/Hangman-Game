@@ -1,0 +1,2 @@
+Window.onload
+alert( "Welcome!");
