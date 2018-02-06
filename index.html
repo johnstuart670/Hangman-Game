@@ -21,7 +21,7 @@
 <p>
 	Welcome to DEATHDROP, gurl!  For (probably not) the first time in HERSTORY, it's the Hangman variant that has you guessing drag queens from RuPaul's Drag Race.  Guess the right letter or Laganja may hit the floor!  I know it sounds sickening but no one has swept for at least a week.  Help a sister out by completing the phrase.
 </p>
-<p>Click on either "Easy Mode" or "Hard Mode" to get started.  Then use your keyboard to see if the letter is in the Queen's name! You can guess the wrong letter 9 times before your girl's wig and costume get dirty. When you have finished the game, you'll get a new queen to guess!</p>
+<p>Click on the letters below to see if the letter is in the Queen's name! You can guess the wrong letter 9 times before your girl's wig and costume get dirty. When you have finished the game, you'll get a new queen to guess!</p>
 <!-- Buttons that change the id for the game -->
 <div class="col-md-12 buttonWrap">
 <button id = "hardMode">Click to Start!</button>
@@ -30,7 +30,7 @@
 </section>
 <!-- Area that shows the Hangman playspace for the word being guessed -->
 <section class ="col-md-12 activeWord ">
-	<h3 id = "guessMe" class = "col-md-4"></h3>
+	<h3 id = "guessMe" class = "col-md-4">	</h3>
 </section>
 <!-- Area that counts successful/failed attempts to complete the word -->
 <section id = "scoreArea">
@@ -41,8 +41,8 @@
 <!-- This area changes the image as needed for where we are in the game -->
 <div class="row">
 <div id = "col-md-5 gallows">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aperiam, officiis nobis quo numquam reiciendis in consequuntur rem molestiae, odit, atque dolore odio obcaecati cupiditate nulla possimus doloremque! Perspiciatis, quaerat.
 <img id = "laganjaScoreCard">
+<div id="buttons"></div>
 
 </div>
 <!-- Area that shows how many guesses remain for this word and what letters have been used. Need to update so it can  -->
