@@ -5,7 +5,7 @@ var word = [];
 var wrongGuesses = 0;
 var rightGuesses = 0;
 var counter = 0;
-var index = 1;
+var lives = 9;
 var wins = 0;
 var losses = 0;
 // create a bunch of buttons
@@ -30,7 +30,12 @@ $(document).ready(function() {
     var toString = tableOfQueens[random];
     console.log(toString);
     word = toString.split("");
-    console.log(word);
+		console.log(word);
+		var wrongGuesses = 0;
+var rightGuesses = 0;
+var counter = 0;
+var lives = 9;
+
 	}
 	
 randomWord();
@@ -51,42 +56,56 @@ randomWord();
 $(".button1").click(function() {
 	// set variable buttonValue to text of button
 	var buttonValue = $(this).text();
+	var goodGuess = word.indexOf(buttonValue) > -1;
+	if (goodGuess) {
+		rightGuesses++;
+	} else {
+		wrongGuesses++;
+	}
 	console.log(buttonValue);
 	// loop through word
 	for (var i = 0; i < word.length; i++){
 		// if word at index is approximate to buttonValue
 		if( word[i] == buttonValue){
-			// push guess to rightGuesses
-			rightGuesses++;
 			// update the .innertext to buttonValue
 			$(("."+buttonValue)).text(buttonValue);
 			console.log(rightGuesses);
-		}
-		else{ wrongGuesses++;
-			// $("#laganjaScoreCard").attr('src', updateImage[wrongGuesses]);
-		}
+		};
+		console.log(lives - wrongGuesses);
+		$("#remaining").html("Guesses Remaining:" +(lives - wrongGuesses))
 	};
 });
 
 // also onkeyup run the function
 document.onkeyup = function(event) {
 	var buttonValue = String.fromCharCode(event.keyCode)
+	var goodGuess = word.indexOf(buttonValue) > -1;
+	if (goodGuess) {
+		rightGuesses++;
+	} else {
+		wrongGuesses++;
+	}
 	console.log(buttonValue);
 	// loop through word
 	for (var i = 0; i < word.length; i++){
 		// if word at index is approximate to buttonValue
 		if( word[i] == buttonValue){
-			// push guess to rightGuesses
-			rightGuesses++;
 			// update the .innertext to buttonValue
 			$(("."+buttonValue)).text(buttonValue);
-			console.log(rightGuesses);
-		}
-		else{ wrongGuesses++;
-			// $("#laganjaScoreCard").attr('src', updateImage[wrongGuesses]);
+
 		}
 	};
+$("#remaining").html("Guesses Remaining:" +(lives - wrongGuesses));
 };
+
+if (rightGuesses === word.length) {
+	win();
+}
+else if ((wrongGuesses - lives) === 0) {
+	lose();
+}
+else {};
+
 
 	function win() {
 	wins++;
